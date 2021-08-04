@@ -1,9 +1,35 @@
 
+header img {
+    height: 50px;
+}
 
-.header {
+header {
     background-color:  #002f34 !important;
 }
 
-.header img {
-    height: 50px;
+
+.dark {
+    background-color: #002f34 !important;
+    color: white !important;
 }
+
+/* background-color: #23e5db !important; */
+.light {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+button {
+    font-size: 30px !important;
+}
+
+/* 
+.dark {
+    background-color: #002f34 !important;
+    color: white !important;
+}
+
+.light {
+    background-color: white !important;
+    color: #002f34 !important;
+} */
