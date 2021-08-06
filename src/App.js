@@ -6,24 +6,26 @@ import Home from './pages/Home';
 import Mobileapps from './pages/Mobileapps';
 import ThemeContex from './theme-context';
 import colors from './data/colors';
+import Products from './pages/Products';
 
 function App() {
 
   const [theme, setTheme] = useState("dark");
   const [selectedColors, setSelectedColors] = useState(colors.dark);
 
-  useEffect(()=>{
+  useEffect(() => {
     setSelectedColors(colors[theme])
-  },[theme])
+  }, [theme])
 
   return (
     <div className="App">
-      <ThemeContex.Provider value={{theme,setTheme, colors:selectedColors}}>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/mobileapps" component={Mobileapps} />
-        <Route path="/:category" ><Category /></Route>
-      </Switch>
+      <ThemeContex.Provider value={{ theme, setTheme, colors: selectedColors }}>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/mobileapps" component={Mobileapps} />
+          <Route path="/:category" exact ><Category /></Route>
+          <Route path="/:category/:id" ><Products /></Route>
+        </Switch>
       </ThemeContex.Provider>
     </div>
   );

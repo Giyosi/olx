@@ -12,7 +12,7 @@ import HeaderWrapper from './HeaderWrapper';
 const Header = () => {
 
     const { theme, setTheme, colors } = useContext(ThemeContex);
-    console.log(theme, setTheme, colors);   
+    // console.log(theme, setTheme, colors);   
 
     const toggle = () => {
         setTheme(theme == "light" ? "dark" : "light");
